@@ -6,28 +6,28 @@
 class GitlabMcpServer < Formula
   desc "GitLab MCP server: REST v4 + GraphQL as tools for AI assistants"
   homepage "https://jmrplens.github.io/gitlab-mcp-server/"
-  version "2.7.4"
+  version "2.7.5"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.4/gitlab-mcp-server-darwin-arm64"
-      sha256 "2b1419f9d1421a1b7f5aba698c122b3681c73e07d01e5b1563747c7b4c5cc6ac"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-darwin-arm64"
+      sha256 "679500f1c81722d09190af93440e28a3763028f88fcedafcefe0ef99fd6fee84"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.4/gitlab-mcp-server-darwin-amd64"
-      sha256 "959cb402f9c9a6e0cdf989d1a12c6025aa879b9fd7e5f70b88bf81a1e3802ca0"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-darwin-amd64"
+      sha256 "8bd640c4c056e077aaf8f7246f10a96ee1c6f2a6a92a260b8e6333863bceb4d9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.4/gitlab-mcp-server-linux-arm64"
-      sha256 "54da5c238561eb90fad7648aefe5c8b3cf96b642998c232fa685917c855c6992"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-linux-arm64"
+      sha256 "5393df4f140cf7b828adee4f4d8d064e2a7a3894f99d35326e5d2bb6f48d5a3a"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.4/gitlab-mcp-server-linux-amd64"
-      sha256 "ded2031ddd261598008c10b02946bcbef4a901d8b3d7c5ab6dc25dc24645c429"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-linux-amd64"
+      sha256 "66464e6285373b3a9c29335ef9f5854c6c82977bb5d5c3c30ff130c87edf5667"
     end
   end
 
