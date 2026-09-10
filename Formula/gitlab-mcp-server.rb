@@ -5,29 +5,34 @@
 # https://github.com/jmrplens/gitlab-mcp-server — do not edit by hand.
 class GitlabMcpServer < Formula
   desc "GitLab MCP server: REST v4 + GraphQL as tools for AI assistants"
-  homepage "https://jmrplens.github.io/gitlab-mcp-server/"
-  version "2.7.5"
+  homepage "https://jmrp.io/docs/gitlab-mcp-server"
+  version "3.0.0"
   license "MIT"
+
+  livecheck do
+    url "https://github.com/jmrplens/gitlab-mcp-server"
+    strategy :github_latest
+  end
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-darwin-arm64"
-      sha256 "679500f1c81722d09190af93440e28a3763028f88fcedafcefe0ef99fd6fee84"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.0.0/gitlab-mcp-server-darwin-arm64"
+      sha256 "df786045560816b0a2f5e545d6dd9d6c12cd5c98041ca0169e28a64aa55623c5"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-darwin-amd64"
-      sha256 "8bd640c4c056e077aaf8f7246f10a96ee1c6f2a6a92a260b8e6333863bceb4d9"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.0.0/gitlab-mcp-server-darwin-amd64"
+      sha256 "ede1aae2c25972c6643d2976c36cf2c25615b21c05e68ca7e807c75021d9f6e6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-linux-arm64"
-      sha256 "5393df4f140cf7b828adee4f4d8d064e2a7a3894f99d35326e5d2bb6f48d5a3a"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.0.0/gitlab-mcp-server-linux-arm64"
+      sha256 "e76c40811312455be7c85089a1fa65373f8364883b664b27ddc36875462a0b19"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v2.7.5/gitlab-mcp-server-linux-amd64"
-      sha256 "66464e6285373b3a9c29335ef9f5854c6c82977bb5d5c3c30ff130c87edf5667"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.0.0/gitlab-mcp-server-linux-amd64"
+      sha256 "7488454f89e391f6e98ccce7dd22bcdb775ac2776566197c666e37af483103e2"
     end
   end
 
@@ -37,16 +42,14 @@ class GitlabMcpServer < Formula
 
   def caveats
     <<~EOS
-      Homebrew manages upgrades for this binary, so disable the built-in
-      self-update in your MCP client configuration:
-        AUTO_UPDATE=false
+      Homebrew manages upgrades for this binary.
 
       Configure your MCP client with:
         command: #{HOMEBREW_PREFIX}/bin/gitlab-mcp-server
         env:     GITLAB_TOKEN=glpat-... (and GITLAB_URL for self-managed)
 
-      Or run the interactive setup wizard:
-        gitlab-mcp-server --setup
+      Per-client JSON:
+        https://jmrp.io/docs/gitlab-mcp-server/configuration/
     EOS
   end
 
