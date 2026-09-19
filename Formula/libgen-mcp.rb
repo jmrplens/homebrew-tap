@@ -6,7 +6,7 @@
 class LibgenMcp < Formula
   desc "MCP server for books and papers: Library Genesis and open-access search, download and reading"
   homepage "https://jmrp.io/docs/libgen-mcp"
-  version "1.7.2"
+  version "1.7.3"
   license "MIT"
 
   livecheck do
@@ -16,23 +16,23 @@ class LibgenMcp < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.2/libgen-mcp-darwin-arm64"
-      sha256 "ff3a2c8b8881ec79f9e82707b77e25b4a5c0e94cc879786680d1138729f2bd57"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.3/libgen-mcp-darwin-arm64"
+      sha256 "0609fc7ecf8511fefaf7fb9dea8f08eac47ffe39a7456603bfe039b9aabcba23"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.2/libgen-mcp-darwin-amd64"
-      sha256 "550f23014042fdbaa53e646b38b94b703bf0579d4eeaa53a130e9b2fe807320f"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.3/libgen-mcp-darwin-amd64"
+      sha256 "1ab48042f0127ea6f090906746e9653b69df92e1971db6b5d2c57147da3b69d6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.2/libgen-mcp-linux-arm64"
-      sha256 "e37cd587518fb83c9d52abdfd7004caa8a6d0b248dda899e7f59d17bf34a2e88"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.3/libgen-mcp-linux-arm64"
+      sha256 "9d1ab0bb1181c2ba0e37a82a5325a3204cace07d20b3d8517dc775003d973eb3"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.2/libgen-mcp-linux-amd64"
-      sha256 "afb48b73671b977b95a6c33aff20d5e7fadc118ffe6e8dd55b48b825d38261e2"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v1.7.3/libgen-mcp-linux-amd64"
+      sha256 "97b86eb062c70a0535dad3bfc763763ce9c858f5606239962b3ce1238d642ed3"
     end
   end
 
