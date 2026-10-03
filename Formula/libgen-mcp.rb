@@ -6,7 +6,7 @@
 class LibgenMcp < Formula
   desc "MCP server for books and papers: Library Genesis and open-access search, download and reading"
   homepage "https://jmrp.io/docs/libgen-mcp"
-  version "2.0.1"
+  version "2.1.0"
   license "MIT"
 
   livecheck do
@@ -16,28 +16,40 @@ class LibgenMcp < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.0.1/libgen-mcp-darwin-arm64"
-      sha256 "c6628c78c26d3aba99c204efec2bd788b10c89bfd72ef910deb0854cec8653f6"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.1.0/libgen-mcp-darwin-arm64"
+      sha256 "db48f2807a848f7c8820de9179a4ca1c2ff9f8cdb348ac97fc286d7aac39f43a"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.0.1/libgen-mcp-darwin-amd64"
-      sha256 "79e2dfba04cc09bbeec93dcdcd5426068bdaaf3d2d3ad38cb1b3730152944dca"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.1.0/libgen-mcp-darwin-amd64"
+      sha256 "711dbb909f91121a47a0af2fac618fc33ed785d113df100fd33ff8ac3d4569d9"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.0.1/libgen-mcp-linux-arm64"
-      sha256 "a889051aa11aa211272fdf6f6e333ce898c56876d5f80eef28d552660d06e428"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.1.0/libgen-mcp-linux-arm64"
+      sha256 "9ea9ebe97a8fa5f75651a1c76b72102ed8019f6ff22090e7ea63cd502ab675ae"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.0.1/libgen-mcp-linux-amd64"
-      sha256 "30de8343be809867dacff5eccae93a12015b1f17f84c4720e475f25689a7f06f"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.1.0/libgen-mcp-linux-amd64"
+      sha256 "23342266f51fb0fafa9ad873aa430023de3fbb5eeca25c8a7eb58f4c218ebb75"
     end
+  end
+
+  resource "license" do
+    url "https://raw.githubusercontent.com/jmrplens/libgen-mcp/v2.1.0/LICENSE"
+    sha256 "8b51067c20a02d645aaa6351bc066c54a73afec5f1b8bffb0b78f5d97df9aaf8"
+  end
+
+  resource "third-party-notices" do
+    url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.1.0/THIRD_PARTY_NOTICES"
+    sha256 "f040a91f32a4b7dca8afce18fce8d222b637e567e1176be720025399f32ed5ef"
   end
 
   def install
     bin.install Dir["libgen-mcp-*"].first => "libgen-mcp"
+    resource("license").stage { prefix.install "LICENSE" }
+    resource("third-party-notices").stage { prefix.install "THIRD_PARTY_NOTICES" }
   end
 
   def caveats
