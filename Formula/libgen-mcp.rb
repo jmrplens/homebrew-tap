@@ -6,7 +6,7 @@
 class LibgenMcp < Formula
   desc "MCP server for books and papers: Library Genesis and open-access search, download and reading"
   homepage "https://jmrp.io/docs/libgen-mcp"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   livecheck do
@@ -16,34 +16,34 @@ class LibgenMcp < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.0/libgen-mcp-darwin-arm64"
-      sha256 "9a808bfc2a7d251253a60343923f718463ef8851934e09fed3a24b954dff148f"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.1/libgen-mcp-darwin-arm64"
+      sha256 "77ca2ba6d0e7009534c7d6e2327c22d5709a23b5826a8ee2b57282e090e08fd8"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.0/libgen-mcp-darwin-amd64"
-      sha256 "86e45638fcc3ce83073ecf9800897480d3e73a99d00b6bbea35315b005371d1f"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.1/libgen-mcp-darwin-amd64"
+      sha256 "ac420c445f2ee9526e3410b5f6235697143268c408bcaa9de2d5a92f29598a4a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.0/libgen-mcp-linux-arm64"
-      sha256 "174602eda7acfc97a49e767f7c6247328102fb303e1e083d0873ab94b0acdf04"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.1/libgen-mcp-linux-arm64"
+      sha256 "ba78365e9a6ab3e40cb748c541618d4df44856bc7008fd0f2443d3e94e1b5b7e"
     end
     on_intel do
-      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.0/libgen-mcp-linux-amd64"
-      sha256 "2c0230559b90f20623b1d5386ca7b790d941cdbcabbb9fad0b6f45b00fed6627"
+      url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.1/libgen-mcp-linux-amd64"
+      sha256 "5470d7d163c8bb5fc520473895b60092974bda46191122eca30bbd57125fdee1"
     end
   end
 
   resource "license" do
-    url "https://raw.githubusercontent.com/jmrplens/libgen-mcp/v2.2.0/LICENSE"
+    url "https://raw.githubusercontent.com/jmrplens/libgen-mcp/v2.2.1/LICENSE"
     sha256 "8b51067c20a02d645aaa6351bc066c54a73afec5f1b8bffb0b78f5d97df9aaf8"
   end
 
   resource "third-party-notices" do
-    url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.0/THIRD_PARTY_NOTICES"
-    sha256 "eca28f20900babf028bcac7454db92d2c077b1e6cddeee8826b727c9412ccd82"
+    url "https://github.com/jmrplens/libgen-mcp/releases/download/v2.2.1/THIRD_PARTY_NOTICES"
+    sha256 "5566b3e401cb0affc27c27e9d5e84bed325776cc28416a8152c3099ab098a25a"
   end
 
   def install
