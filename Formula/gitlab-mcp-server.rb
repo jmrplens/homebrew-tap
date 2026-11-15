@@ -9,7 +9,7 @@
 class GitlabMcpServer < Formula
   desc "GitLab MCP server: REST v4 + GraphQL as tools for AI assistants"
   homepage "https://docs.jmrp.io/gitlab-mcp-server/"
-  version "3.5.0"
+  version "3.6.0"
   license "MIT"
 
   livecheck do
@@ -19,34 +19,34 @@ class GitlabMcpServer < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.5.0/gitlab-mcp-server-darwin-arm64"
-      sha256 "bd6f6d8e21e98b2fbade38a1611965c5d9961fbae701589877ea45e50d6f73c7"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.6.0/gitlab-mcp-server-darwin-arm64"
+      sha256 "6a05048279b24b93548625a341d54a8cbebf5b5cc6940eb34559ccbb3fe485e3"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.5.0/gitlab-mcp-server-darwin-amd64"
-      sha256 "db948124c5ae640af6cd006adc4e6c5783bf1b7632b61609a2769d78658245a9"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.6.0/gitlab-mcp-server-darwin-amd64"
+      sha256 "dc1545fb5450cecb0ca8f2ede6400eae5674e551bfbf23b82a39de679f46aa9f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.5.0/gitlab-mcp-server-linux-arm64"
-      sha256 "b39c65ebce20deb3388666f4c78ea9792d326e0ab37f1f5ce66b00caa2654fb6"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.6.0/gitlab-mcp-server-linux-arm64"
+      sha256 "bb0a959da2804447ea566f40d0e87b8250fc60ddb4ee3886fdb9a7af99cbd5e7"
     end
     on_intel do
-      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.5.0/gitlab-mcp-server-linux-amd64"
-      sha256 "58fc06db869f9b9c0fee162900e520c51c03547368776bb49241fc3ceb82bc10"
+      url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.6.0/gitlab-mcp-server-linux-amd64"
+      sha256 "aa868aff4b5d69fc07cd1338a384376bda14ef55c8c26abc1798a35b1f31ee6d"
     end
   end
 
   resource "license" do
-    url "https://raw.githubusercontent.com/jmrplens/gitlab-mcp-server/v3.5.0/LICENSE"
+    url "https://raw.githubusercontent.com/jmrplens/gitlab-mcp-server/v3.6.0/LICENSE"
     sha256 "c1e3ca2438c6f44af92d13e69731e75ae57130a571da3c3fb84fa39d9c1817c5"
   end
 
   resource "third-party-notices" do
-    url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.5.0/THIRD_PARTY_NOTICES"
-    sha256 "da85af4ccd1e591ffeaeab8dec981f7ef083c1858a18ccb37e6579334cdb86bf"
+    url "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v3.6.0/THIRD_PARTY_NOTICES"
+    sha256 "5e37e6d7746b0adb1e874a119a47cab42a44f1d9c69c05aff5402f8c5af66b69"
   end
 
   def install
